@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { ConexionService } from './services/conexion.service';
 import { ListComponent } from './components/list/list.component';
 import { AddlistComponent } from './components/addlist/addlist.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AddlistComponent } from './components/addlist/addlist.component';
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
