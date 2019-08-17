@@ -41,7 +41,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container mt-5\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6\">\r\n      <app-list></app-list>\r\n    </div>\r\n    <div class=\"col-md-6\">\r\n      <app-addlist></app-addlist>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"container mt-5\">\r\n  <h1>Testing Firebase with Angular</h1>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6\">\r\n      <app-list></app-list>\r\n    </div>\r\n    <div class=\"col-md-6\">\r\n      <app-addlist></app-addlist>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
