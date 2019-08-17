@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConexionService } from 'src/app/services/conexion.service';
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faTrashAlt, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-list',
@@ -9,7 +9,11 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 })
 export class ListComponent implements OnInit {
   faTrashAlt = faTrashAlt;
+  faPencilAlt = faPencilAlt
   items: any;
+  editItem: any = {
+    name: ''
+  }
   constructor(private conexion:ConexionService) {
     this.items = this.conexion.getItems().subscribe(item => {
       this.items = item;
@@ -21,6 +25,14 @@ export class ListComponent implements OnInit {
 
   delete(item){
     this.conexion.removeItem(item);
+  }
+
+  edit(item){
+    this.editItem = item;
+  }
+
+  editingItem(){
+    this.conexion.editItem(this.editItem);
   }
 
 }
